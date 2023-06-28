@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --global-background-color: #7EA0B7;
+    --global-shawdow-color: #A9CEF4;
+    --link-background-color: #FF5A5F ;
+    --global-text-color: #03045E;
+    --text-hover-color:#000000;
+}
+
+html{
+      background-color: var(--global-background-color);
+      color: var(--global-text-color);
+}
+
+a{
+    font-family: 'Caprasimo', cursive;
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--global-text-color);
+}
+
+a:hover{
+    color: var(--text-hover-color);
+}
+
+input{
+    width: 70%;
+    margin: 10px auto;
+    padding: 5px;
+    border:none;
+}
+
+input:focus{
+    border: solid 1px var(--link-background-color);
+}
+
+header{
+box-shadow: 0 10px 15px -3px var(--global-shawdow-color);
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+header nav ul{
+    list-style-type: none;
+    display: inline-flex;
+}
+
+header nav ul li{
+    margin: 5px;
+}
+@media screen and (max-width: 640px) {
+    header nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brand{
+        margin-bottom: 30px;
+    }
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 10px 15px -3px var();
+}
