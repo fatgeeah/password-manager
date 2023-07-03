@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -7,19 +7,20 @@
 }
 
 :root{
-    --global-background-color: #FFF;
+    --global-background-color: #000000;
     --global-shawdow-color: #03045E;
     --link-background-color: #FF5A5F ;
     --global-text-color: #03045E;
-    --text-hover-color: #000000;
+    --text-hover-color:white;
 }
+
 html{
       background-color: var(--global-background-color);
       color: var(--global-text-color);
 }
 
 a{
-    font-family: 'Caprasimo', cursive;
+    font-family: 'Orbitron', sans-serif;
     font-weight: bold;
     font-size: 24px;
     text-decoration: none;
@@ -32,17 +33,19 @@ a:hover{
 }
 
 input{
-    font-family: 'Ysabeau SC', sans-serif;
+    display: flex;
+    font-family: 'Josefin Sans', sans-serif;
     color: var(--global-text-color);
-    font-size: 20px;
+    font-size: 25px;
     border-radius: 5px;
-    width: 40%;
-    margin: 10px auto;
-    padding: 5px;
-    border: solid 1px var(--global-text-color);
+    width: 80%;
+    margin: 13px auto;
+    padding: 12px;
+    border: solid 0.5px #9ecaed;
+    box-shadow: 0 0 7px white;
 }
 input:focus{
-    border: solid 2px var(--global-text-color);
+    box-shadow: 0 0 10px white;
 }
 
 header{
@@ -76,6 +79,14 @@ header nav ul li{
     }
 }
 
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 10px 15px -3px var();
+}
 .modals-wrapper{
     width: 100%;
     height: 100%;
@@ -86,8 +97,10 @@ header nav ul li{
 }
 
 .modal{
-    min-width: 50%;
-    min-height: 50%;
+    border-radius: 5px;
+    background-color:var(--global-text-color);
+    min-width: 60%;
+    min-height: 60%;
     padding: 20px;
 }
 
@@ -98,8 +111,22 @@ header nav ul li{
     text-align: center;
 }
 
+#close-modal{
+    border-radius: 5px;
+    color:white;
+    background-color: var(--global-text-color);
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+    padding: 15px;
+}
+
 h2{
-    font-family: 'Caprasimo', cursive;
+    margin-right: 300px;
+    margin-bottom: 30px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
     font-weight: bold;
     font-size: 50px; 
 }
