@@ -7,11 +7,10 @@
 }
 
 :root{
-    --global-background-color: #000000;
-    --global-shawdow-color: #03045E;
-    --link-background-color: #FF5A5F ;
-    --global-text-color: #03045E;
-    --text-hover-color:white;
+    --global-background-color: #0C8346;
+    --global-shawdow-color: #8FD5A6;
+    --global-text-color: #F7F9F9;
+    --text-hover-color:#E5C2C0;
 }
 
 html{
@@ -35,17 +34,17 @@ a:hover{
 input{
     display: flex;
     font-family: 'Josefin Sans', sans-serif;
-    color: var(--global-text-color);
+    color: var(--global-background-color);
     font-size: 25px;
     border-radius: 5px;
     width: 100%;
     margin: 13px auto;
     padding: 12px;
     border: solid 0.5px #9ecaed;
-    box-shadow: 0 0 7px white;
+    box-shadow: 0 0 7px var(--text-hover-color);
 }
 input:focus{
-    box-shadow: 0 0 10px white;
+    box-shadow: 0 0 10px var(--text-hover-color);
 }
 
 header{
@@ -90,7 +89,8 @@ footer{
 .modals-wrapper{
     width: 100%;
     height: 100%;
-    display: flex;
+    background-color:var(--text-hover-color) ;
+    display: none;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -98,23 +98,30 @@ footer{
 
 .modal{
     border-radius: 5px;
-    background-color:var(--global-text-color);
-    min-width: 60%;
-    min-height: 60%;
+    background-color:var(--global-background-color);
+    min-width: 600px;
+    min-height: 500px;
     padding: 20px;
 }
 
-#login-modal{
-    display: flex;
+#signup-modal , #login-modal{
+    display:none;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-
+#password-modal{
+    font-size: 20px;;
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 #close-modal{
     border-radius: 5px;
-    color:white;
-    background-color: var(--global-text-color);
+    color:var(--global-text-color);
+    background-color: var(--global-background-color);
     position: absolute;
     top: 5%;
     right: 5%;
@@ -125,13 +132,8 @@ footer{
 h2{
     margin-right: 300px;
     margin-bottom: 30px;
-    color: white;
+    color: var(--global-text-color);
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
     font-size: 50px; 
-}
-
-.image{
-    margin-top: 200px;
-    margin-left: 50px;  
 }
