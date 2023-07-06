@@ -15,3 +15,11 @@ if (modalWrapper) {
     }
 }
 
+const copies = document.querySelectorAll(".copy");
+copies.forEach(copy => {
+    copy.onclick = () => {
+        let elementToCopy = copy.previousElementSibling;
+        elementToCopy.select();
+        document.execCommand("copy");
+    }
+})
