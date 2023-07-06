@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Django Password Manager</title>
-    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style100.css">
     <script src="main.js" defer></script>
 </head>
@@ -13,12 +13,13 @@
     
     <header>
         <nav>
-               <div class="brand"><a href="">&nbsp;P.Manager </a><i class="fa fa-lock" aria-hidden="true"></i></div>
+               <div class="brand"><a href="">&nbsp;P.Manager <i class="fa fa-lock" aria-hidden="true"></i></a></div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="javascript:;" onclick="displayModal('signup-modal');">Signup</a></li>
                 <li><a href="javascript:;" onclick="displayModal('login-modal');">Login</a></li>
                 <li><a href="javascript:;" onclick="displayModal('password-modal');">View</a></li>
+                <li><a href="javascript:;" onclick="displayModal('add-password-modal');">Add</a></li>
             </ul>
         </nav>
     </header>
@@ -28,10 +29,10 @@
         <div class="modal" id="signup-modal">
             <form action="">
                 <h2>SignUp</h2>
-                <input type="text" name="username" placeholder="username">
-                <input type="email" name="email" placeholder="email">
-                <input type="password" name="password" placeholder="password">
-                <input type="password2" name="password2" placeholder="confirm password">
+                <input type="text" autocomplete="off" name="username" placeholder="username">
+                <input type="email"  autocomplete="off" name="email" placeholder="email">
+                <input type="password" autocomplete="off" name="password" placeholder="password">
+                <input type="password" autocomplete="off" name="password2" placeholder="confirm password">
                 <input type="submit" value="SignUp">
             </form>    
         </div> 
@@ -40,9 +41,9 @@
           <form action="">
               <h2>Login</h2>
               <br>
-              <input type="text" name="username" placeholder="username">
-              <input type="email" name="email" placeholder="email">
-              <input type="password" name="password" placeholder="password">
+              <input type="text" autocomplete="off" name="username" placeholder="username">
+              <input type="email" autocomplete="off" name="email" placeholder="email">
+              <input type="password" autocomplete="off" name="password" placeholder="password">
               <input type="submit" value="Login">
           </form>    
       </div>
@@ -51,13 +52,110 @@
             <h2>URL or Name</h2>
             <img width="80" height="80" src="https://cdn.pixabay.com/photo/2016/04/13/14/27/google-chrome-1326908_1280.png" alt="">
             <br>
-            <input type="email" name="email" placeholder="email"><i class="fas fa-copy copy" title="copy to clipboard"></i>
+            <input type="emai" name="email" placeholder="email"><i class="fas fa-copy copy" title="copy to clipboard"></i>
             <input type="password" name="username" value="password"><i class="fas fa-copy copy" title="copy to clipboard"></i>
   </div>  
+
+  <div class="modal" id="add-password-modal">
+    <form action="">
+        <h2>Add new password</h2>
+        <input type="text" autocomplete="off" name="url" placeholder="url of website">
+        <br/>
+        <input type="email"  autocomplete="off" name="email" placeholder="email">
+        <br/>
+        <input type="password" autocomplete="off" name="password" placeholder="password">
+        <br/>
+        <input type="submit" value="Save">
+    </form>    
+</div>
+</div>
+<div class="container">
+    <div class="card">
+        <div class="actions">&nbsp;Actions
+            <a href="" class="action-item">Delete</a>
+            <a href="" class="action-item">View</a>
+            <a href="" class="action-item">Update</a>
+        </div>    
+        <img width="50" height="50" src="https://cdn.pixabay.com/photo/2016/04/13/14/27/google-chrome-1326908_1280.png" alt="">
+        <div class="name">Google Account</div>
+    </div> 
+    
+    <div class="card">
+        <div class="actions">&nbsp;Actions
+            <a href="" class="action-item">Delete</a>
+            <a href="" class="action-item">View</a>
+            <a href="" class="action-item">Update</a>
+        </div>    
+        <img width="50" height="50" src="https://cdn.pixabay.com/photo/2016/04/13/14/27/google-chrome-1326908_1280.png" alt="">
+        <div class="name">Google Account</div>
+    </div>   
+
+
+    <div class="card">
+        <div class="actions">&nbsp;Actions
+            <a href="" class="action-item">Delete</a>
+            <a href="" class="action-item">View</a>
+            <a href="" class="action-item">Update</a>
+        </div>    
+        <img width="50" height="50" src="https://cdn.pixabay.com/photo/2016/04/13/14/27/google-chrome-1326908_1280.png" alt="">
+        <div class="name">Google Account</div>
+    </div>   
+
+    <div class="card">
+        <div class="actions">&nbsp;Actions
+            <a href="" class="action-item">Delete</a>
+            <a href="" class="action-item">View</a>
+            <a href="" class="action-item">Update</a>
+        </div>    
+        <img width="50" height="50" src="https://cdn.pixabay.com/photo/2016/04/13/14/27/google-chrome-1326908_1280.png" alt="">
+        <div class="name">Google Account</div>
+    </div>   
+
+    <div class="card">
+        <div class="actions">&nbsp;Actions
+            <a href="" class="action-item">Delete</a>
+            <a href="" class="action-item">View</a>
+            <a href="" class="action-item">Update</a>
+        </div>    
+        <img width="50" height="50" src="https://cdn.pixabay.com/photo/2016/04/13/14/27/google-chrome-1326908_1280.png" alt="">
+        <div class="name">Google Account</div>
+    </div>   
+
+    <div class="card">
+        <div class="actions">&nbsp;Actions
+            <a href="" class="action-item">Delete</a>
+            <a href="" class="action-item">View</a>
+            <a href="" class="action-item">Update</a>
+        </div>    
+        <img width="50" height="50" src="https://cdn.pixabay.com/photo/2016/04/13/14/27/google-chrome-1326908_1280.png" alt="">
+        <div class="name">Google Account</div>
+    </div>   
+
+    <div class="card">
+        <div class="actions">&nbsp;Actions
+            <a href="" class="action-item">Delete</a>
+            <a href="" class="action-item">View</a>
+            <a href="" class="action-item">Update</a>
+        </div>    
+        <img width="50" height="50" src="https://cdn.pixabay.com/photo/2016/04/13/14/27/google-chrome-1326908_1280.png" alt="">
+        <div class="name">Google Account</div>
+    </div>   
+
+    <div class="card">
+        <div class="actions">&nbsp;Actions
+            <a href="" class="action-item">Delete</a>
+            <a href="" class="action-item">View</a>
+            <a href="" class="action-item">Update</a>
+        </div>    
+        <img width="50" height="50" src="https://cdn.pixabay.com/photo/2016/04/13/14/27/google-chrome-1326908_1280.png" alt="">
+        <div class="name">Google Account</div>
+    </div>   
+
 </div>  
+
 <footer>
-    <a href="">Link to the project</a>
+    <p href="">Link to the project</p>
 </footer>
 
 </body>
-</html>    
+</html>
